@@ -1,11 +1,10 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Screen Capture Suite - Universal Source Code</title>
+    <title>Professional Screen Capture Suite</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -13,11 +12,12 @@
             --primary-dark: #1d4ed8;
             --secondary: #8b5cf6;
             --accent: #ec4899;
-            --light: #f8fafc;
-            --dark: #1e293b;
+            --dark-bg: #2d3748;
+            --section-bg: #3c4757;
+            --card-bg: #4a5568;
             --success: #10b981;
-            --gray: #64748b;
-            --light-gray: #e2e8f0;
+            --text-light: #e2e8f0;
+            --text-lighter: #f7fafc;
         }
         
         * {
@@ -28,8 +28,8 @@
         }
         
         body {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            color: var(--dark);
+            background: var(--dark-bg);
+            color: var(--text-light);
             line-height: 1.6;
         }
         
@@ -42,7 +42,7 @@
         header {
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
-            padding: 2rem 0;
+            padding: 3rem 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -55,18 +55,25 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: var(--text-lighter);
         }
         
         h2 {
             font-size: 2rem;
-            margin: 2rem 0 1rem;
-            color: var(--primary-dark);
+            margin: 0 0 1.5rem;
+            color: var(--text-lighter);
         }
         
         h3 {
             font-size: 1.5rem;
-            margin: 1.5rem 0 1rem;
-            color: var(--secondary);
+            margin: 0 0 1rem;
+            color: var(--text-lighter);
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+            margin: 0 0 0.5rem;
+            color: var(--text-lighter);
         }
         
         p {
@@ -124,23 +131,16 @@
         }
         
         section {
-            padding: 4rem 0;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .section-light {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin: 2rem 0;
-            padding: 2.5rem;
-        }
-        
-        .section-dark {
-            background: linear-gradient(to right, var(--primary-dark), var(--secondary));
-            color: white;
+        .section-content {
+            background: var(--section-bg);
             border-radius: 10px;
             padding: 2.5rem;
-            margin: 2rem 0;
+            margin: 1rem 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .pricing-grid {
@@ -151,7 +151,7 @@
         }
         
         .pricing-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -221,7 +221,7 @@
         }
         
         .extension-card {
-            background: var(--light);
+            background: var(--card-bg);
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -274,10 +274,11 @@
             padding: 0.2rem 0.5rem;
             border-radius: 5px;
             font-weight: 600;
+            color: #000;
         }
         
         footer {
-            background: var(--dark);
+            background: #1a202c;
             color: white;
             padding: 3rem 0;
             margin-top: 4rem;
@@ -299,7 +300,11 @@
             text-align: center;
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 1px solid var(--gray);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .white-text {
+            color: white;
         }
         
         @media (max-width: 768px) {
@@ -318,6 +323,10 @@
             .pricing-grid, .extensions-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .section-content {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -334,15 +343,16 @@
     </header>
 
     <div class="container">
+        <!-- Benefits Section -->
         <section>
-            <div class="section-light">
+            <div class="section-content">
                 <h2 class="text-center">Why Choose Our Screen Capture Solutions?</h2>
                 <p class="text-center">Our source code is trusted by developers and businesses worldwide, with over 2,100+ active users on the Chrome Web Store.</p>
                 
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Production Ready</h3>
+                            <h3 class="white-text">Production Ready</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -356,7 +366,7 @@
                     
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Commercial Grade</h3>
+                            <h3 class="white-text">Commercial Grade</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -370,7 +380,7 @@
                     
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Business Friendly</h3>
+                            <h3 class="white-text">Business Friendly</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -385,89 +395,97 @@
             </div>
         </section>
 
+        <!-- Pricing Section -->
         <section id="pricing">
-            <h2 class="text-center">Screen Capture Suite Pricing</h2>
-            <p class="text-center">Choose the package that fits your needs. All packages include source code and commercial rights.</p>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>4K Ultra HD Series</h3>
-                        <p>Premium 4K recording solutions</p>
-                    </div>
-                    <div class="pricing-body">
-                        <div class="price">$399 <span class="price-small">each</span></div>
-                        <div class="savings">Save up to $496 with bundle</div>
-                        <ul class="features">
-                            <li>Screen Capture Recorder 4K</li>
-                            <li>Capture Master 4K</li>
-                            <li>Screen Flow 4K</li>
-                            <li>Vision Capture 4K</li>
-                            <li>Game Capture 4K</li>
-                        </ul>
-                        <div class="text-center">
-                            <a href="https://ko-fi.com/s/b30ebaf714" class="btn">Complete 4K Suite: $1,499</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-content">
+                <h2 class="text-center">Screen Capture Suite Pricing</h2>
+                <p class="text-center">Choose the package that fits your needs. All packages include source code and commercial rights.</p>
                 
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Pro Series</h3>
-                        <p>Professional recording solutions</p>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="white-text">4K Ultra HD Series</h3>
+                            <p class="white-text">Premium 4K recording solutions</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price">$399 <span class="price-small">each</span></div>
+                            <div class="savings">Save up to $496 with bundle</div>
+                            <ul class="features">
+                                <li>Screen Capture Recorder 4K</li>
+                                <li>Capture Master 4K</li>
+                                <li>Screen Flow 4K</li>
+                                <li>Vision Capture 4K</li>
+                                <li>Game Capture 4K</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="https://ko-fi.com/s/b30ebaf714" class="btn">Complete 4K Suite: $1,499</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pricing-body">
-                        <div class="price">$299 <span class="price-small">each</span></div>
-                        <div class="savings">Save up to $197 with bundle</div>
-                        <ul class="features">
-                            <li>DevCapture Pro</li>
-                            <li>EduCapture Pro</li>
-                            <li>Meeting Capture Pro</li>
-                            <li>Game Vision Pro</li>
-                        </ul>
-                        <div class="text-center">
-                            <a href="https://ko-fi.com/s/486515d3e4" class="btn">Complete Pro Suite: $999</a>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="white-text">Pro Series</h3>
+                            <p class="white-text">Professional recording solutions</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price">$299 <span class="price-small">each</span></div>
+                            <div class="savings">Save up to $197 with bundle</div>
+                            <ul class="features">
+                                <li>DevCapture Pro</li>
+                                <li>EduCapture Pro</li>
+                                <li>Meeting Capture Pro</li>
+                                <li>Game Vision Pro</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="https://ko-fi.com/s/486515d3e4" class="btn">Complete Pro Suite: $999</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="white-text">Lite Series</h3>
+                            <p class="white-text">Essential recording solutions</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price">$199 <span class="price-small">each</span></div>
+                            <div class="savings">Save up to $97 with bundle</div>
+                            <ul class="features">
+                                <li>BizCapture Lite</li>
+                                <li>Learn Capture Lite</li>
+                                <li>Screen Snap Lite</li>
+                                <li>Game Snap Lite</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="https://ko-fi.com/s/e011ac71dc" class="btn">Complete Lite Suite: $699</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Lite Series</h3>
-                        <p>Essential recording solutions</p>
-                    </div>
-                    <div class="pricing-body">
-                        <div class="price">$199 <span class="price-small">each</span></div>
-                        <div class="savings">Save up to $97 with bundle</div>
-                        <ul class="features">
-                            <li>BizCapture Lite</li>
-                            <li>Learn Capture Lite</li>
-                            <li>Screen Snap Lite</li>
-                            <li>Game Snap Lite</li>
-                        </ul>
-                        <div class="text-center">
-                            <a href="https://ko-fi.com/s/e011ac71dc" class="btn">Complete Lite Suite: $699</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section-dark text-center">
-                <h2>Universal Bundle</h2>
-                <p>Get access to all 13 extensions at an incredible discount</p>
-                <div class="price">$2,999</div>
-                <p class="savings">Save $1,188 compared to individual purchases</p>
-                <a href="https://ko-fi.com/s/6c64b2ee55" class="btn btn-accent btn-large">Get Universal Bundle</a>
-                <p>Regular Price: <s>$4,187</s></p>
             </div>
         </section>
 
+        <!-- Universal Bundle Section -->
         <section>
-            <div class="section-light">
-                <h2 class="text-center">Individual Extensions</h2>
-                <p class="text-center">Purchase individual extensions based on your specific needs</p>
+            <div class="section-content">
+                <h2 class="text-center">Universal Bundle</h2>
+                <p class="text-center">Get access to all 13 extensions at an incredible discount</p>
+                <div class="price white-text text-center">$2,999</div>
+                <p class="savings text-center">Save $1,188 compared to individual purchases</p>
+                <div class="text-center">
+                    <a href="https://ko-fi.com/s/6c64b2ee55" class="btn btn-accent btn-large">Get Universal Bundle</a>
+                </div>
+                <p class="text-center white-text mt-2">Regular Price: <s>$4,187</s></p>
+            </div>
+        </section>
+
+        <!-- 4K Series Section -->
+        <section>
+            <div class="section-content">
+                <h2 class="text-center">4K Ultra HD Series</h2>
+                <p class="text-center">Premium 4K recording solutions with advanced features</p>
                 
-                <h3>4K Ultra HD Series</h3>
                 <div class="extensions-grid">
                     <div class="extension-card">
                         <span class="badge badge-4k">4K</span>
@@ -504,8 +522,15 @@
                         <a href="https://ko-fi.com/s/90f17d1bef" class="btn btn-secondary">$399 - Purchase</a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Pro Series Section -->
+        <section>
+            <div class="section-content">
+                <h2 class="text-center">Pro Series</h2>
+                <p class="text-center">Professional recording solutions for specific use cases</p>
                 
-                <h3>Pro Series</h3>
                 <div class="extensions-grid">
                     <div class="extension-card">
                         <span class="badge badge-pro">PRO</span>
@@ -535,8 +560,15 @@
                         <a href="https://ko-fi.com/s/35278f1f9b" class="btn btn-secondary">$299 - Purchase</a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Lite Series Section -->
+        <section>
+            <div class="section-content">
+                <h2 class="text-center">Lite Series</h2>
+                <p class="text-center">Essential recording solutions for basic needs</p>
                 
-                <h3>Lite Series</h3>
                 <div class="extensions-grid">
                     <div class="extension-card">
                         <span class="badge badge-lite">LITE</span>
@@ -569,13 +601,15 @@
             </div>
         </section>
 
+        <!-- Technical Specifications Section -->
         <section>
-            <div class="section-light">
+            <div class="section-content">
                 <h2 class="text-center">Technical Specifications</h2>
+                
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Platform & Languages</h3>
+                            <h3 class="white-text">Platform & Languages</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -588,7 +622,7 @@
                     
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Storage & Performance</h3>
+                            <h3 class="white-text">Storage & Performance</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -601,7 +635,7 @@
                     
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Video & Audio</h3>
+                            <h3 class="white-text">Video & Audio</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -615,12 +649,15 @@
             </div>
         </section>
 
+        <!-- Call to Action Section -->
         <section>
-            <div class="section-dark text-center">
-                <h2>Ready to Enhance Your Screen Capture Capabilities?</h2>
-                <p>Purchase individual extensions or save significantly with our bundle packages</p>
-                <a href="#pricing" class="btn btn-accent btn-large">Explore Pricing Options</a>
-                <p class="mt-3">Questions? Email us at <span class="highlight">kofiklubteam@gmail.com</span></p>
+            <div class="section-content">
+                <h2 class="text-center">Ready to Enhance Your Screen Capture Capabilities?</h2>
+                <p class="text-center">Purchase individual extensions or save significantly with our bundle packages</p>
+                <div class="text-center">
+                    <a href="#pricing" class="btn btn-accent btn-large">Explore Pricing Options</a>
+                </div>
+                <p class="text-center mt-3">Questions? Email us at <span class="highlight">kofiklubteam@gmail.com</span></p>
             </div>
         </section>
     </div>
