@@ -16,7 +16,8 @@
             --dark: #1e293b;
             --success: #10b981;
             --gray: #64748b;
-            --light-gray: #e2e8f0;
+            --light-gray: #f5f7fa;
+            --background: #f5f7fa;
         }
         
         * {
@@ -27,7 +28,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            background: var(--background);
             color: var(--dark);
             line-height: 1.6;
         }
@@ -127,7 +128,7 @@
         }
         
         .section-light {
-            background: white;
+            background: var(--light-gray);
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             margin: 2rem 0;
@@ -220,7 +221,7 @@
         }
         
         .extension-card {
-            background: var(--light);
+            background: white;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -301,6 +302,10 @@
             border-top: 1px solid var(--gray);
         }
         
+        .white-text {
+            color: white;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -341,7 +346,7 @@
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Production Ready</h3>
+                            <h3 class="white-text">Production Ready</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -355,7 +360,7 @@
                     
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Commercial Grade</h3>
+                            <h3 class="white-text">Commercial Grade</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -369,7 +374,7 @@
                     
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Business Friendly</h3>
+                            <h3 class="white-text">Business Friendly</h3>
                         </div>
                         <div class="pricing-body">
                             <ul class="features">
@@ -391,8 +396,8 @@
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3>4K Ultra HD Series</h3>
-                        <p>Premium 4K recording solutions</p>
+                        <h3 class="white-text">4K Ultra HD Series</h3>
+                        <p class="white-text">Premium 4K recording solutions</p>
                     </div>
                     <div class="pricing-body">
                         <div class="price">$399 <span class="price-small">each</span></div>
@@ -412,8 +417,8 @@
                 
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3>Pro Series</h3>
-                        <p>Professional recording solutions</p>
+                        <h3 class="white-text">Pro Series</h3>
+                        <p class="white-text">Professional recording solutions</p>
                     </div>
                     <div class="pricing-body">
                         <div class="price">$299 <span class="price-small">each</span></div>
@@ -432,8 +437,8 @@
                 
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3>Lite Series</h3>
-                        <p>Essential recording solutions</p>
+                        <h3 class="white-text">Lite Series</h3>
+                        <p class="white-text">Essential recording solutions</p>
                     </div>
                     <div class="pricing-body">
                         <div class="price">$199 <span class="price-small">each</span></div>
@@ -452,12 +457,12 @@
             </div>
             
             <div class="section-dark text-center">
-                <h2>Universal Bundle</h2>
-                <p>Get access to all 13 extensions at an incredible discount</p>
-                <div class="price">$2,999</div>
+                <h2 class="white-text">Universal Bundle</h2>
+                <p class="white-text">Get access to all 13 extensions at an incredible discount</p>
+                <div class="price white-text">$2,999</div>
                 <p class="savings">Save $1,188 compared to individual purchases</p>
                 <a href="https://ko-fi.com/s/6c64b2ee55" class="btn btn-accent btn-large">Get Universal Bundle</a>
-                <p>Regular Price: <s>$4,187</s></p>
+                <p class="white-text">Regular Price: <s>$4,187</s></p>
             </div>
         </section>
 
@@ -555,4 +560,100 @@
                         <span class="badge badge-lite">LITE</span>
                         <h4>Screen Snap Lite</h4>
                         <p>Basic screen capture made easy</p>
-                        <a href="https://ko-fi.com/s/cdfbdf9483" class
+                        <a href="https://ko-fi.com/s/cdfbdf9483" class="btn btn-secondary">$199 - Purchase</a>
+                    </div>
+                    
+                    <div class="extension-card">
+                        <span class="badge badge-lite">LITE</span>
+                        <h4>Game Snap Lite</h4>
+                        <p>Lightweight game recording</p>
+                        <a href="https://ko-fi.com/s/ec2fd67581" class="btn btn-secondary">$199 - Purchase</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-light">
+                <h2 class="text-center">Technical Specifications</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="white-text">Platform & Languages</h3>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="features">
+                                <li>Chrome Extension (MV3)</li>
+                                <li>HTML5, CSS3, JavaScript</li>
+                                <li>WebRTC, Canvas, MediaRecorder APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="white-text">Storage & Performance</h3>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="features">
+                                <li>chrome.storage.local, IndexedDB</li>
+                                <li>Low CPU usage optimization</li>
+                                <li>Hardware acceleration support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="white-text">Video & Audio</h3>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="features">
+                                <li>VP9, H.264 encoding support</li>
+                                <li>AAC, Opus codec support</li>
+                                <li>Multi-source audio capture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-dark text-center">
+                <h2 class="white-text">Ready to Enhance Your Screen Capture Capabilities?</h2>
+                <p class="white-text">Purchase individual extensions or save significantly with our bundle packages</p>
+                <a href="#pricing" class="btn btn-accent btn-large">Explore Pricing Options</a>
+                <p class="mt-3 white-text">Questions? Email us at <span class="highlight">kofiklubteam@gmail.com</span></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Professional Screen Capture Suite</h3>
+                    <p>Enterprise-grade Chrome extension source code for all your screen recording needs.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Kerwin Peters (Eyedolise)</p>
+                    <p>Email: kofiklubteam@gmail.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>License</h3>
+                    <p>Universal Source Code License</p>
+                    <p>By purchasing, you agree to the terms in LICENSE.txt</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 Kerwin Peters (Eyedolise). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
