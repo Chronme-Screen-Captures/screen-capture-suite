@@ -152,11 +152,48 @@ Regular Price: $1,995
 Bundle Price: $1,499
 Savings: $496
 
+4K Suite:
+https://ko-fi.com/s/b30ebaf714
+
+Screen Capture Recorder 4K:
+https://ko-fi.com/s/37deb99c0b
+
+Capture Master 4K:
+https://ko-fi.com/s/200188f3c8
+
+Screen Flow 4K:
+https://ko-fi.com/s/b171c231b0
+
+Vision Capture 4K:
+https://ko-fi.com/s/9aaf4e121a
+
+Game Capture 4K:
+https://ko-fi.com/s/90f17d1bef
+
+
+
 Package: Pro Suite
 Extensions Included: 4
 Regular Price: $1,196
 Bundle Price: $999
 Savings: $197
+
+Pro Suite:
+https://ko-fi.com/s/486515d3e4
+
+DevCapture Pro:
+https://ko-fi.com/s/77c5624a39
+
+EduCapture Pro:
+https://ko-fi.com/s/edb7999663
+
+Meeting Capture Pro:
+https://ko-fi.com/s/16a6e4e086
+
+Game Vision Pro:
+https://ko-fi.com/s/35278f1f9b
+
+
 
 Package: Lite Suite
 Extensions Included: 4
@@ -164,14 +201,33 @@ Regular Price: $796
 Bundle Price: $699
 Savings: $97
 
+Lite Suite: 
+https://ko-fi.com/s/e011ac71dc
+
+BizCapture Lite:
+https://ko-fi.com/s/1933e098b9
+
+Learn Capture Lite:
+https://ko-fi.com/s/1346ab328f
+
+Screen Snap Lite:
+https://ko-fi.com/s/cdfbdf9483
+
+Game Snap Lite:
+https://ko-fi.com/s/ec2fd67581
+
+
+
 Package: UNIVERSAL
 Extensions Included: 13
 Regular Price: $4,187
 Bundle Price: $2,999
 Savings: $1,188
 
-Get Universal Bundle: 
+Get UNIVERSAL Bundle: 
 https://ko-fi.com/s/6c64b2ee55
+
+
 Questions? Email Us: kofiklubteam@gmail.com
 
 © 2024 Kerwin Peters (Eyedolise). All rights reserved.
