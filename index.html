@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Screen Capture Suite - Universal Source Code</title>
+    <title>Professional Screen Capture Suite</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -12,12 +12,14 @@
             --primary-dark: #1d4ed8;
             --secondary: #8b5cf6;
             --accent: #ec4899;
-            --light: #f8fafc;
+            --light: #2d3748;
             --dark: #1e293b;
             --success: #10b981;
             --gray: #64748b;
-            --light-gray: #f5f7fa;
-            --background: #f5f7fa;
+            --light-gray: #4a5568;
+            --background: #2d3748;
+            --text-light: #e2e8f0;
+            --card-bg: #374151;
         }
         
         * {
@@ -29,7 +31,7 @@
         
         body {
             background: var(--background);
-            color: var(--dark);
+            color: var(--text-light);
             line-height: 1.6;
         }
         
@@ -42,7 +44,7 @@
         header {
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
-            padding: 2rem 0;
+            padding: 3rem 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -53,29 +55,39 @@
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin: 2rem 0 1rem;
-            color: var(--primary-dark);
+            color: var(--primary);
+            font-weight: 600;
         }
         
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin: 1.5rem 0 1rem;
             color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        h4 {
+            font-size: 1.4rem;
+            margin: 1.2rem 0 0.8rem;
+            color: var(--text-light);
         }
         
         p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         .tagline {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 300;
             max-width: 800px;
             margin: 0 auto 1.5rem;
@@ -85,21 +97,21 @@
             display: inline-block;
             background: var(--primary);
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            margin: 5px;
+            margin: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         .btn:hover {
             background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
         .btn-secondary {
@@ -119,91 +131,92 @@
         }
         
         .btn-large {
-            padding: 16px 32px;
-            font-size: 1.2rem;
+            padding: 16px 36px;
+            font-size: 1.3rem;
         }
         
         section {
             padding: 4rem 0;
+            border-bottom: 1px solid var(--light-gray);
         }
         
-        .section-light {
-            background: var(--light-gray);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        .section-content {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
             margin: 2rem 0;
             padding: 2.5rem;
+            transition: transform 0.3s ease;
         }
         
-        .section-dark {
-            background: linear-gradient(to right, var(--primary-dark), var(--secondary));
-            color: white;
-            border-radius: 10px;
-            padding: 2.5rem;
-            margin: 2rem 0;
+        .section-content:hover {
+            transform: translateY(-5px);
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
         
         .pricing-card {
-            background: white;
-            border-radius: 10px;
+            background: var(--light);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
+            color: var(--text-light);
         }
         
         .pricing-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
         }
         
         .pricing-header {
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
-            padding: 1.5rem;
+            padding: 1.8rem;
             text-align: center;
         }
         
         .pricing-body {
-            padding: 1.5rem;
+            padding: 1.8rem;
         }
         
         .price {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
             color: var(--primary);
-            margin: 1rem 0;
+            margin: 1.2rem 0;
             text-align: center;
         }
         
         .price-small {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
         
         .savings {
             background: var(--success);
             color: white;
-            padding: 5px 10px;
+            padding: 8px 16px;
             border-radius: 20px;
             font-weight: 600;
             display: inline-block;
-            margin: 10px 0;
+            margin: 12px 0;
+            font-size: 1.1rem;
         }
         
         .features {
             list-style-type: none;
-            margin: 1rem 0;
+            margin: 1.2rem 0;
         }
         
         .features li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            padding-left: 2rem;
             position: relative;
+            font-size: 1.1rem;
         }
         
         .features li:before {
@@ -211,35 +224,38 @@
             color: var(--success);
             position: absolute;
             left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         
         .extensions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
             margin: 2rem 0;
         }
         
         .extension-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            background: var(--light);
+            padding: 1.8rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            color: var(--text-light);
         }
         
         .extension-card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
         }
         
         .badge {
             display: inline-block;
-            padding: 3px 8px;
-            border-radius: 15px;
-            font-size: 0.8rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-right: 5px;
+            margin-right: 8px;
         }
         
         .badge-4k {
@@ -271,9 +287,10 @@
         
         .highlight {
             background: linear-gradient(120deg, #f0abfc 0%, #c4b5fd 100%);
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
             font-weight: 600;
+            color: var(--dark);
         }
         
         footer {
@@ -306,13 +323,21 @@
             color: white;
         }
         
+        .intro-text {
+            max-width: 900px;
+            margin: 2rem auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             h2 {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
             
             .tagline {
@@ -321,6 +346,11 @@
             
             .pricing-grid, .extensions-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                margin: 5px;
             }
         }
     </style>
@@ -338,52 +368,52 @@
     </header>
 
     <div class="container">
-        <section>
-            <div class="section-light">
-                <h2 class="text-center">Why Choose Our Screen Capture Solutions?</h2>
-                <p class="text-center">Our source code is trusted by developers and businesses worldwide, with over 2,100+ active users on the Chrome Web Store.</p>
+        <div class="intro-text">
+            <p>Our source code is trusted by developers and businesses worldwide, with over 2,100+ active users on the Chrome Web Store. Each extension is production-ready, fully tested, and optimized for performance.</p>
+        </div>
+
+        <section id="features">
+            <h2 class="text-center">Why Choose Our Screen Capture Solutions?</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="white-text">Production Ready</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="features">
+                            <li>Fully tested and optimized codebase</li>
+                            <li>Clean, documented code</li>
+                            <li>Regular updates and maintenance</li>
+                            <li>Enterprise-level features</li>
+                        </ul>
+                    </div>
+                </div>
                 
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3 class="white-text">Production Ready</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="features">
-                                <li>Fully tested and optimized codebase</li>
-                                <li>Clean, documented code</li>
-                                <li>Regular updates and maintenance</li>
-                                <li>Enterprise-level features</li>
-                            </ul>
-                        </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="white-text">Commercial Grade</h3>
                     </div>
-                    
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3 class="white-text">Commercial Grade</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="features">
-                                <li>Scalable architecture</li>
-                                <li>Professional UI/UX design</li>
-                                <li>Cross-browser compatible</li>
-                                <li>Commercial use allowed</li>
-                            </ul>
-                        </div>
+                    <div class="pricing-body">
+                        <ul class="features">
+                            <li>Scalable architecture</li>
+                            <li>Professional UI/UX design</li>
+                            <li>Cross-browser compatible</li>
+                            <li>Commercial use allowed</li>
+                        </ul>
                     </div>
-                    
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3 class="white-text">Business Friendly</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="features">
-                                <li>Rebranding permitted</li>
-                                <li>Integration support</li>
-                                <li>Royalty-free deployment</li>
-                                <li>30 days email support</li>
-                            </ul>
-                        </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="white-text">Business Friendly</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="features">
+                            <li>Rebranding permitted</li>
+                            <li>Integration support</li>
+                            <li>Royalty-free deployment</li>
+                            <li>30 days email support</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -455,176 +485,185 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="universal">
+            <h2 class="text-center">Universal Bundle</h2>
+            <div class="section-content">
+                <p class="text-center">Get access to all 13 extensions at an incredible discount</p>
+                <div class="price white-text text-center">$2,999</div>
+                <p class="savings text-center">Save $1,188 compared to individual purchases</p>
+                <div class="text-center">
+                    <a href="https://ko-fi.com/s/6c64b2ee55" class="btn btn-accent btn-large">Get Universal Bundle</a>
+                </div>
+                <p class="text-center white-text">Regular Price: <s>$4,187</s></p>
+            </div>
+        </section>
+
+        <section id="4k-extensions">
+            <h2 class="text-center">4K Ultra HD Series Extensions</h2>
+            <p class="text-center">Premium 4K recording solutions with advanced features</p>
             
-            <div class="section-dark text-center">
-                <h2 class="white-text">Universal Bundle</h2>
-                <p class="white-text">Get access to all 13 extensions at an incredible discount</p>
-                <div class="price white-text">$2,999</div>
-                <p class="savings">Save $1,188 compared to individual purchases</p>
-                <a href="https://ko-fi.com/s/6c64b2ee55" class="btn btn-accent btn-large">Get Universal Bundle</a>
-                <p class="white-text">Regular Price: <s>$4,187</s></p>
-            </div>
-        </section>
-
-        <section>
-            <div class="section-light">
-                <h2 class="text-center">Individual Extensions</h2>
-                <p class="text-center">Purchase individual extensions based on your specific needs</p>
-                
-                <h3>4K Ultra HD Series</h3>
-                <div class="extensions-grid">
-                    <div class="extension-card">
-                        <span class="badge badge-4k">4K</span>
-                        <h4>Screen Capture Recorder 4K</h4>
-                        <p>Premium 4K recording with advanced editing</p>
-                        <a href="https://ko-fi.com/s/37deb99c0b" class="btn btn-secondary">$399 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-4k">4K</span>
-                        <h4>Capture Master 4K</h4>
-                        <p>All-in-one professional capture solution</p>
-                        <a href="https://ko-fi.com/s/200188f3c8" class="btn btn-secondary">$399 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-4k">4K</span>
-                        <h4>Screen Flow 4K</h4>
-                        <p>Smooth workflow optimized recording</p>
-                        <a href="https://ko-fi.com/s/b171c231b0" class="btn btn-secondary">$399 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-4k">4K</span>
-                        <h4>Vision Capture 4K</h4>
-                        <p>AI-enhanced visual capture technology</p>
-                        <a href="https://ko-fi.com/s/9aaf4e121a" class="btn btn-secondary">$399 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-4k">4K</span>
-                        <h4>Game Capture 4K</h4>
-                        <p>Universal game recording with performance optimization</p>
-                        <a href="https://ko-fi.com/s/90f17d1bef" class="btn btn-secondary">$399 - Purchase</a>
-                    </div>
+            <div class="extensions-grid">
+                <div class="extension-card">
+                    <span class="badge badge-4k">4K</span>
+                    <h4>Screen Capture Recorder 4K</h4>
+                    <p>Premium 4K recording with advanced editing</p>
+                    <a href="https://ko-fi.com/s/37deb99c0b" class="btn btn-secondary">$399 - Purchase</a>
                 </div>
                 
-                <h3>Pro Series</h3>
-                <div class="extensions-grid">
-                    <div class="extension-card">
-                        <span class="badge badge-pro">PRO</span>
-                        <h4>DevCapture Pro</h4>
-                        <p>Developer-focused screen recording</p>
-                        <a href="https://ko-fi.com/s/77c5624a39" class="btn btn-secondary">$299 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-pro">PRO</span>
-                        <h4>EduCapture Pro</h4>
-                        <p>Education and tutorial recording optimized</p>
-                        <a href="https://ko-fi.com/s/edb7999663" class="btn btn-secondary">$299 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-pro">PRO</span>
-                        <h4>Meeting Capture Pro</h4>
-                        <p>Professional meeting and presentation capture</p>
-                        <a href="https://ko-fi.com/s/16a6e4e086" class="btn btn-secondary">$299 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-pro">PRO</span>
-                        <h4>Game Vision Pro</h4>
-                        <p>Advanced gameplay recording and analysis</p>
-                        <a href="https://ko-fi.com/s/35278f1f9b" class="btn btn-secondary">$299 - Purchase</a>
-                    </div>
+                <div class="extension-card">
+                    <span class="badge badge-4k">4K</span>
+                    <h4>Capture Master 4K</h4>
+                    <p>All-in-one professional capture solution</p>
+                    <a href="https://ko-fi.com/s/200188f3c8" class="btn btn-secondary">$399 - Purchase</a>
                 </div>
                 
-                <h3>Lite Series</h3>
-                <div class="extensions-grid">
-                    <div class="extension-card">
-                        <span class="badge badge-lite">LITE</span>
-                        <h4>BizCapture Lite</h4>
-                        <p>Business and productivity recording</p>
-                        <a href="https://ko-fi.com/s/1933e098b9" class="btn btn-secondary">$199 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-lite">LITE</span>
-                        <h4>Learn Capture Lite</h4>
-                        <p>Educational content creation</p>
-                        <a href="https://ko-fi.com/s/1346ab328f" class="btn btn-secondary">$199 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-lite">LITE</span>
-                        <h4>Screen Snap Lite</h4>
-                        <p>Basic screen capture made easy</p>
-                        <a href="https://ko-fi.com/s/cdfbdf9483" class="btn btn-secondary">$199 - Purchase</a>
-                    </div>
-                    
-                    <div class="extension-card">
-                        <span class="badge badge-lite">LITE</span>
-                        <h4>Game Snap Lite</h4>
-                        <p>Lightweight game recording</p>
-                        <a href="https://ko-fi.com/s/ec2fd67581" class="btn btn-secondary">$199 - Purchase</a>
-                    </div>
+                <div class="extension-card">
+                    <span class="badge badge-4k">4K</span>
+                    <h4>Screen Flow 4K</h4>
+                    <p>Smooth workflow optimized recording</p>
+                    <a href="https://ko-fi.com/s/b171c231b0" class="btn btn-secondary">$399 - Purchase</a>
+                </div>
+                
+                <div class="extension-card">
+                    <span class="badge badge-4k">4K</span>
+                    <h4>Vision Capture 4K</h4>
+                    <p>AI-enhanced visual capture technology</p>
+                    <a href="https://ko-fi.com/s/9aaf4e121a" class="btn btn-secondary">$399 - Purchase</a>
+                </div>
+                
+                <div class="extension-card">
+                    <span class="badge badge-4k">4K</span>
+                    <h4>Game Capture 4K</h4>
+                    <p>Universal game recording with performance optimization</p>
+                    <a href="https://ko-fi.com/s/90f17d1bef" class="btn btn-secondary">$399 - Purchase</a>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="section-light">
-                <h2 class="text-center">Technical Specifications</h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3 class="white-text">Platform & Languages</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="features">
-                                <li>Chrome Extension (MV3)</li>
-                                <li>HTML5, CSS3, JavaScript</li>
-                                <li>WebRTC, Canvas, MediaRecorder APIs</li>
-                            </ul>
-                        </div>
+        <section id="pro-extensions">
+            <h2 class="text-center">Pro Series Extensions</h2>
+            <p class="text-center">Professional recording solutions for specific use cases</p>
+            
+            <div class="extensions-grid">
+                <div class="extension-card">
+                    <span class="badge badge-pro">PRO</span>
+                    <h4>DevCapture Pro</h4>
+                    <p>Developer-focused screen recording</p>
+                    <a href="https://ko-fi.com/s/77c5624a39" class="btn btn-secondary">$299 - Purchase</a>
+                </div>
+                
+                <div class="extension-card">
+                    <span class="badge badge-pro">PRO</span>
+                    <h4>EduCapture Pro</h4>
+                    <p>Education and tutorial recording optimized</p>
+                    <a href="https://ko-fi.com/s/edb7999663" class="btn btn-secondary">$299 - Purchase</a>
+                </div>
+                
+                <div class="extension-card">
+                    <span class="badge badge-pro">PRO</span>
+                    <h4>Meeting Capture Pro</h4>
+                    <p>Professional meeting and presentation capture</p>
+                    <a href="https://ko-fi.com/s/16a6e4e086" class="btn btn-secondary">$299 - Purchase</a>
+                </div>
+                
+                <div class="extension-card">
+                    <span class="badge badge-pro">PRO</span>
+                    <h4>Game Vision Pro</h4>
+                    <p>Advanced gameplay recording and analysis</p>
+                    <a href="https://ko-fi.com/s/35278f1f9b" class="btn btn-secondary">$299 - Purchase</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="lite-extensions">
+            <h2 class="text-center">Lite Series Extensions</h2>
+            <p class="text-center">Essential recording solutions for basic needs</p>
+            
+            <div class="extensions-grid">
+                <div class="extension-card">
+                    <span class="badge badge-lite">LITE</span>
+                    <h4>BizCapture Lite</h4>
+                    <p>Business and productivity recording</p>
+                    <a href="https://ko-fi.com/s/1933e098b9" class="btn btn-secondary">$199 - Purchase</a>
+                </div>
+                
+                <div class="extension-card">
+                    <span class="badge badge-lite">LITE</span>
+                    <h4>Learn Capture Lite</h4>
+                    <p>Educational content creation</p>
+                    <a href="https://ko-fi.com/s/1346ab328f" class="btn btn-secondary">$199 - Purchase</a>
+                </div>
+                
+                <div class="extension-card">
+                    <span class="badge badge-lite">LITE</span>
+                    <h4>Screen Snap Lite</h4>
+                    <p>Basic screen capture made easy</p>
+                    <a href="https://ko-fi.com/s/cdfbdf9483" class="btn btn-secondary">$199 - Purchase</a>
+                </div>
+                
+                <div class="extension-card">
+                    <span class="badge badge-lite">LITE</span>
+                    <h4>Game Snap Lite</h4>
+                    <p>Lightweight game recording</p>
+                    <a href="https://ko-fi.com/s/ec2fd67581" class="btn btn-secondary">$199 - Purchase</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="specs">
+            <h2 class="text-center">Technical Specifications</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="white-text">Platform & Languages</h3>
                     </div>
-                    
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3 class="white-text">Storage & Performance</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="features">
-                                <li>chrome.storage.local, IndexedDB</li>
-                                <li>Low CPU usage optimization</li>
-                                <li>Hardware acceleration support</li>
-                            </ul>
-                        </div>
+                    <div class="pricing-body">
+                        <ul class="features">
+                            <li>Chrome Extension (MV3)</li>
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <li>WebRTC, Canvas, MediaRecorder APIs</li>
+                        </ul>
                     </div>
-                    
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3 class="white-text">Video & Audio</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="features">
-                                <li>VP9, H.264 encoding support</li>
-                                <li>AAC, Opus codec support</li>
-                                <li>Multi-source audio capture</li>
-                            </ul>
-                        </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="white-text">Storage & Performance</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="features">
+                            <li>chrome.storage.local, IndexedDB</li>
+                            <li>Low CPU usage optimization</li>
+                            <li>Hardware acceleration support</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="white-text">Video & Audio</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="features">
+                            <li>VP9, H.264 encoding support</li>
+                            <li>AAC, Opus codec support</li>
+                            <li>Multi-source audio capture</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="section-dark text-center">
-                <h2 class="white-text">Ready to Enhance Your Screen Capture Capabilities?</h2>
-                <p class="white-text">Purchase individual extensions or save significantly with our bundle packages</p>
-                <a href="#pricing" class="btn btn-accent btn-large">Explore Pricing Options</a>
-                <p class="mt-3 white-text">Questions? Email us at <span class="highlight">kofiklubteam@gmail.com</span></p>
+        <section id="cta">
+            <h2 class="text-center">Ready to Enhance Your Screen Capture Capabilities?</h2>
+            <div class="section-content">
+                <p class="text-center">Purchase individual extensions or save significantly with our bundle packages</p>
+                <div class="text-center">
+                    <a href="#pricing" class="btn btn-accent btn-large">Explore Pricing Options</a>
+                </div>
+                <p class="text-center white-text mt-3">Questions? Email us at <span class="highlight">kofiklubteam@gmail.com</span></p>
             </div>
         </section>
     </div>
