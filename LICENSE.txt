@@ -1,0 +1,45 @@
+UNIVERSAL SOURCE CODE LICENSE AGREEMENT
+Applies to:
+Screen Capture Recorder 4K, BizCapture Lite, Learn Capture Lite, Screen Snap Lite, Game Snap Lite, DevCapture Pro, EduCapture Pro, Meeting Capture Pro, Game Vision Pro, Capture Master 4K, Screen Flow 4K, Vision Capture 4K, Game Capture 4K
+Effective Immediately Upon Purchase
+
+This License Agreement (“Agreement”) is made between the original creator and licensor, Kerwin Peters aka Eyedolise (“Licensor”), and the purchaser (“Licensee”) of any source code package listed above (“Software”).
+
+1. GRANT OF LICENSE
+Licensor grants Licensee a non-exclusive, non-transferable license to use, modify, and rebrand the Software under the terms defined below.
+
+2. PERMITTED USES
+Licensee is permitted to:
+
+Use and modify the Software for personal, business, or commercial purposes.
+
+Integrate the Software into private, internal, or customer-facing tools and applications.
+
+Rebrand the Software with new names, logos, or user interfaces.
+
+Package and distribute the rebranded or significantly modified Software as part of their own products or services.
+
+3. RESTRICTIONS
+Licensee may not:
+
+Redistribute or resell the Software as-is or with only superficial changes.
+
+Upload or publicly share the unmodified source code, including on GitHub or any other code repository.
+
+Remove or falsify copyright notices indicating the original author.
+
+Claim exclusive or original authorship of the core codebase.
+
+4. INTELLECTUAL PROPERTY
+All rights, titles, and intellectual property in the original Software remain exclusively with the Licensor. This Agreement does not transfer ownership of the original codebase.
+
+5. NO WARRANTY
+The Software is provided “as is,” without warranties of any kind, express or implied. The Licensor shall not be held liable for any damages arising from the use or performance of the Software.
+
+6. TERMINATION
+This license will automatically terminate if the Licensee breaches any terms of this Agreement. Upon termination, the Licensee must cease all use and delete all copies of the Software.
+
+7. CONTACT
+For questions about resale, commercial licensing, or exclusivity, contact:
+Kerwin Peters aka Eyedolise
+Email: kofiklubteam@gmail.com
